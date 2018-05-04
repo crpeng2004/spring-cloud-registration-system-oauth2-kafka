@@ -50,7 +50,7 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        Resource resource = new ClassPathResource("ms-auth.cert");
+        Resource resource = new ClassPathResource("auth.cert");
         String publicKey;
         try {
             publicKey = new String(FileCopyUtils.copyToByteArray(resource.getInputStream()));
