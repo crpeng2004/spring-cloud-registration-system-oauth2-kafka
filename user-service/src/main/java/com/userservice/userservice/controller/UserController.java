@@ -21,14 +21,14 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @PreAuthorize("hasAuthority('ROLE_USER')")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     @RequestMapping(method = RequestMethod.GET, path = "/members/{id}")
     public ResponseEntity<User> findByUserId(@PathVariable("id") Long id) {
         User result = userService.findById(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @RequestMapping(method = RequestMethod.GET, path = "/members")
     public ResponseEntity<Iterable<User>> getAll() {
         Iterable<User> all = userService.findAll();
