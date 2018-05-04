@@ -19,8 +19,8 @@ spring:
 
 zuul:
   routes:
-    ms-user: /api/user/**
-    ms-auth-server : /auth/**
+    user-service: /api/user/**
+    auth-server : /auth/**
 
 ---
 oauth:
