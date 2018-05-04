@@ -1,5 +1,5 @@
 #Architecture
-![](./img/arc.PNG)
+![](./img/arc.png)
 
 #Images
 ![](./img/1.PNG)
